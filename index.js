@@ -12,7 +12,7 @@ const config = {
 
 blaki.on('ready', async () => {
     console.log(`${blaki.user.username} jest online!`);
-    blaki.user.setActivity('KOD BLAKI_ W SKLEPIE!', { type: 'LISTENING'});
+    blaki.user.setActivity('KOD BLAKI_ W SKLEPIE!', { type: 'WATCHING'});
 });
 
 fs.readdir("./commands/", (err, files) => {
