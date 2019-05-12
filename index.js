@@ -13,6 +13,14 @@ const config = {
 blaki.on('ready', async () => {
     console.log(`${blaki.user.username} jest online!`);
     blaki.user.setActivity('KOD BLAKI_ W SKLEPIE!', { type: 'WATCHING'});
+    
+    const guild = bot.guilds.get('577167959047405588');
+    setInterval(function() {
+		console.log('Getting stats update..')
+        const onlineUsers = blaki.channels.get('577178212141105154');
+		var humansCount = member.guild.members.filter(member => !member.user.bot).size;
+	  	humansCount.setName("🔥 Jest Nas: " + MemberCount);
+	}, 30000)
 });
 
 fs.readdir("./commands/", (err, files) => {
