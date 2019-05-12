@@ -6,8 +6,8 @@ module.exports.run = async (blaki, message, args) => {
 
     let pass = (args[0]);
     let mode = args.join(" ").slice(7);
-    const ping = "<@&535100081444225035>"
-    const check = '577121399043522560'
+    const ping = "<@&577205221994922046>"
+    const check = '577203620144087040'
 
     if(!message.member.roles.has(Szefuncio.id)) return message.reply("oops");
     if(!args[0]) return message.channel.send("❌ _Wprowadź prawidłowe wartości, **b!ct hasło tryb**_ ❌").then(() =>
@@ -21,7 +21,7 @@ module.exports.run = async (blaki, message, args) => {
     .addField("Hasło:", `**${pass}**`)
     .addField("Tryb Gry:", `**${mode}**`)
     .setTimestamp(message.createdAt)
-    .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/KyTy1HB.png");
+    .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/HViVOMF.png");
     message.channel.send(ping);
     message.channel.send(customEmbed).then(function (message) {
         message.react(check)
