@@ -14,7 +14,7 @@ module.exports.run = async (blaki, message, args) => {
     const check = '577203620144087040'
 
     if(!message.member.roles.has(Szefuncio.id)) return message.reply("oops");
-    if(!args[0]) return message.channel.send("❌ _Wprowadź prawidłowe wartości, **b!ct hasło tryb**_ ❌").then(() =>
+    if(!args[0]) return message.channel.send("❌ _Wprowadź prawidłowe wartości, **!late hasło tryb**_ ❌").then(() =>
     {
         message.channel.send("❌ _**Hasło musi posiadać dokładnie 7 znaków!**_ ❌");
     })
