@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const MemberCount = member.guild.channels.get('577178212141105154');
+const MemberCount = nlaki.channels.get('577178212141105154');
 
 module.exports.run = async (blaki, member, args) => {
 	setInterval(function() {
