@@ -1,8 +1,13 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (blaki, member, args) => {;
-	let humans = member.guild.members.filter(member => !member.user.bot).size;
-	member.guild.channels.get('577178212141105154').setName(`🔥 Jest Nas: ${humans}`)
+const MemberCount = member.guild.channels.get('577178212141105154');
+
+module.exports.run = async (blaki, member, args) => {
+	setInterval(function() {
+		console.log('Getting stats update..')
+		var humansCount = member.guild.members.filter(member => !member.user.bot).size;
+	  	humansCount.setName("🔥 Jest Nas: " + MemberCount);
+	}, 30000)
 };
 
 module.exports.help = {
