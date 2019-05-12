@@ -18,7 +18,7 @@ blaki.on('ready', async () => {
     setInterval(function() {
 		console.log('Getting stats update..')
         const onlineUsers = blaki.channels.get('577178212141105154');
-		var humansCount = member.guild.members.filter(member => !member.user.bot).size;
+		var humansCount = guild.members.filter(m => !m.user.bot).size;
 	  	humansCount.setName("🔥 Jest Nas: " + MemberCount);
 	}, 30000)
 });
