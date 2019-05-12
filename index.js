@@ -16,10 +16,11 @@ blaki.on('ready', async () => {
     
     const guild = blaki.guilds.get('577167959047405588');
     setInterval(function() {
+	    	console.log("Odświeżam statystyki");
         	const HumansChannel = blaki.channels.get("577178212141105154");
 	        const OnlineChannel = blaki.channels.get("577246837585477643");
 		var HumansCount = guild.members.filter(m => !m.user.bot).size;
-	        var OnlineCount = guild.members.filter(m => m.presence.status === 'online').size;
+	        var OnlineCount = guild.members.filter(m => !m.user.bot || m.presence.status === 'online').size;
 	        HumansChannel.setName("🔥 Jest Nas: " + HumansCount);
 	        OnlineChannel.setName("💚 Aktywni: " + OnlineCount);
 	}, 30000)
