@@ -8,12 +8,12 @@ module.exports.run = async (blaki, message, args) => {
     let reportEmbed = new Discord.RichEmbed()
     .setAuthor("KOD » BLAKI_", "https://i.imgur.com/HViVOMF.png")
     .setColor("#ff0000")
-    .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-    .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
-    .addField("Channel", message.channel)
-    .addField("Reason", rreason)
+    .addField("Zgłoszony Gracz", `${rUser} jego ID: ${rUser.id}`)
+    .addField("Zgłoszony przez", `${message.author} jego ID: ${message.author.id}`)
+    .addField("Kanał", message.channel)
+    .addField("Powód", rreason)
     .setTimestamp(message.createdAt)
-    .setFooter('Nowe Zgłoszenie', 'https://i.imgur.com/g10ycEV.png');
+    .setFooter('Nowe Zgłoszenie', 'https://i.imgur.com/HViVOMF.png');
 
     let reportschannel = message.guild.channels.find(`name`, "zgłoszenia");
     if(!reportschannel) return message.channel.send("Nie znaleziono kanału do zgłoszeń.");
