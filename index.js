@@ -20,7 +20,7 @@ blaki.on('ready', async () => {
         	const HumansChannel = blaki.channels.get("577178212141105154");
 	        const OnlineChannel = blaki.channels.get("577246837585477643");
 		var HumansCount = guild.members.filter(m => !m.user.bot).size;
-	        var OnlineCount = guild.members.filter(m => !m.user.bot || m.presence.status === 'online').size;
+	        var OnlineCount = guild.members.filter(m => m.presence.status === 'online').size
 	        HumansChannel.setName("🔥 Jest Nas: " + HumansCount);
 	        OnlineChannel.setName("💚 Aktywni: " + OnlineCount);
 	}, 30000)
@@ -38,7 +38,7 @@ fs.readdir("./commands/", (err, files) => {
 
   jsfile.forEach((f, i) =>{
     let props = require(`./commands/${f}`);
-    console.log(`${f} loaded!`);
+    console.log(`${f} załadowane!`);
     blaki.commands.set(props.help.name, props);
   });
 
