@@ -4,3 +4,7 @@ module.exports.run = async (blaki, member, args) => {
 	let humans = member.guild.members.filter(member => !member.user.blaki).size;
 	member.guild.channels.get('577173572280254467').setName(`Jest Nas: ${humans}`)
 };
+
+module.exports.help = {
+    name: "stats"
+}
