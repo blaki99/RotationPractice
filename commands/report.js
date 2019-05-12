@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (blaki, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("❌ Nie podano użytkownika, wpisz b!report @user powód aby zgłosić użytkownika ❌");
+    if(!rUser) return message.channel.send("❌ Nie podano użytkownika, wpisz !report @user powód aby zgłosić użytkownika ❌");
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
