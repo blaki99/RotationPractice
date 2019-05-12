@@ -1,1 +1,1 @@
-# RotationPractice
+# beznickos-bot
