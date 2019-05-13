@@ -12,13 +12,13 @@ const config = {
 
 blaki.on('ready', async () => {
     console.log(`${blaki.user.username} jest online!`);
-    blaki.user.setActivity('KOD BLAKI_ W SKLEPIE!', { type: 'WATCHING'});
+    blaki.user.setActivity('KOD BLAKI_ W SKLEPIE!', { type: 'STREAMING'});
     
     const guild = blaki.guilds.get('577167959047405588');
     setInterval(function() {
         	const HumansChannel = blaki.channels.get("577178212141105154");
 	        const OnlineChannel = blaki.channels.get("577246837585477643");
-		var HumansCount = guild.members.filter(m => m.user.bot).size;
+		var HumansCount = guild.memberCount;
 	        var OnlineCount = guild.members.filter(m => m.presence.status === 'online').size
 	        HumansChannel.setName("🔥 Jest Nas: " + HumansCount);
 	        OnlineChannel.setName("💚 Aktywni: " + OnlineCount);
