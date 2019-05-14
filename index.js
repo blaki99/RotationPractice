@@ -64,4 +64,10 @@ blaki.on("message", async message => {
   
 });
 
+blaki.on('guildMemberAdd', member => 
+{
+  let WelcomeChannel = blaki.channels.get("577953278692687883");
+  WelcomeChannel.send("Hejka " + member.user.username + " na serwerze **FORTNITE PRACTICE**");
+});
+
 blaki.login(config.token);
