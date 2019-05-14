@@ -64,7 +64,7 @@ blaki.on("message", async message => {
   
 });
 
-blaki.on('guildMemberAdd', async (member, message) => 
+blaki.on('guildMemberAdd', (member, message) => 
 {
   let rUser = message.guild.member(message.mentions.users.first());
   let WelcomeChannel = blaki.channels.get("577953278692687883");
