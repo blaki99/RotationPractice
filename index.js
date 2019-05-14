@@ -26,7 +26,7 @@ blaki.on('ready', async () =>
     const OnlineChannel = blaki.channels.get("577246837585477643");
     var HumansCount = guild.members.filter(m => !m.user.bot).size;
     var OnlineCount = guild.members.filter(m => m.presence.status === 'online').size
-    DateChannel.setName("📅" + date.format(now, 'DD.MM.YYYY'));
+    DateChannel.setName("📅 " + date.format(now, 'DD.MM.YYYY'));
     OnlineChannel.setName("💚 Aktywni: " + OnlineCount);
     HumansChannel.setName("🔥 Jest Nas: " + HumansCount);
   }, 30000)
